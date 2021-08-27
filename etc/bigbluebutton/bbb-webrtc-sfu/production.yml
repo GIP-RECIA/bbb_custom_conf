@@ -1,0 +1,12 @@
+# override /usr/local/bigbluebutton/bbb-webrtc-sfu/config/default.yml
+
+conference-media-specs:
+  H264:
+    tias_content: "300000"
+    as_content: "300"
+  VP8:
+    tias_content: "250000"
+    as_content: "250"
+  OPUS:
+    maxaveragebitrate: "30000"
+    maxplaybackrate: "48000"
