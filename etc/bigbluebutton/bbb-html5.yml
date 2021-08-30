@@ -1,6 +1,8 @@
 # override /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 public:
   app:
+    enableNetworkStats: true
+    enableCopyNetworkStatsButton: true
     defaultSettings:
       application:
         fallbackLocale: "fr"
