@@ -5,7 +5,7 @@ public:
     enableCopyNetworkStatsButton: true
     defaultSettings:
       application:
-        fallbackLocale: "fr"
+        fallbackLocale: "en"
         overrideLocale: "fr"
   kurento:
     cameraProfiles:
