@@ -46,6 +46,13 @@ sed -i "s/^log_history=.*/log_history=366/g" /etc/cron.daily/bigbluebutton
 # important pour les access log car réglé à 14 jours sinon - commenté car appliqué via ansible
 #xmlstarlet ed --inplace -u "/configuration/appender[@name='FILE']/rollingPolicy/MaxHistory" -v 366 /usr/share/bbb-web/WEB-INF/classes/logback.xml
 
+echo "  - Apply fr_CA sounds"
+# before install FR_CA with script as example https://raw.githubusercontent.com/joshebosh/signalwire/master/sh/stack_sound_file.sh
+xmlstarlet edit --inplace --update '//X-PRE-PROCESS[@cmd="set" and starts-with(@data, "sound_prefix=")]/@data' --value "sound_prefix=/opt/freeswitch/share/freeswitch/sounds/fr/ca/june" /opt/freeswitch/etc/freeswitch/vars.xml
+# back to origin conf
+#xmlstarlet edit --inplace --update '//X-PRE-PROCESS[@cmd="set" and starts-with(@data, "sound_prefix=")]/@data' --value "sound_prefix=\$\${sounds_dir}/en/us/callie" /opt/freeswitch/etc/freeswitch/vars.xml
+
+
 
 ### CONF APPLIED ON BBB 2.2.36
 
