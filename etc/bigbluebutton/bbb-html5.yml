@@ -3,6 +3,7 @@ public:
   app:
     enableNetworkStats: true
     enableCopyNetworkStatsButton: true
+    askForFeedbackOnLogout: false
     defaultSettings:
       application:
         fallbackLocale: "en"
