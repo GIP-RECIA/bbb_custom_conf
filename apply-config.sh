@@ -26,6 +26,9 @@ cat $CUSTOM_DIR/etc/bigbluebutton/bbb-web.properties >> /etc/bigbluebutton/bbb-w
 # pré-requis apt-get install bbb-playback-notes bbb-playback-screenshare bbb-playback-podcast
 # fichier modifié /usr/local/bigbluebutton/core/scripts/bigbluebutton.yml
 
+echo "  - Patch temporaire v2.3: apply fix for screenshare"
+yq w -i /usr/local/bigbluebutton/core/scripts/screenshare.yml 'layout.:framerate' 25
+
 echo "  - Apply enableMultipleKurentos"
 enableMultipleKurentos
 
