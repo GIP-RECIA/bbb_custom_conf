@@ -6,8 +6,7 @@ public:
     askForFeedbackOnLogout: false
     defaultSettings:
       application:
-        fallbackLocale: "en"
-        overrideLocale: "fr"
+        fallbackLocale: "fr"
   kurento:
     cameraProfiles:
       - id: low-u30
