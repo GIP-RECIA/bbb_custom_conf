@@ -75,7 +75,7 @@ public:
           height:
             max: 1200
           frameRate:
-            ideal: 25
+            ideal: 22
             max: 25
     pagination:
       desktopPageSizes:
